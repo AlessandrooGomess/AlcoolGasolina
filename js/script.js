@@ -22,3 +22,21 @@ function calcularMelhorPreco() {  //criei uma função com o nome de "calcularMe
         alert("Digite o preço do álcool")    //Se for igual a nada ele dispara um alerta, porque o usuário não digitou.
     }
 }
+
+document.getElementById('alcool').addEventListener('keypress', function (event) {
+    const permitidos = "0123456789.,";
+
+    if(!permitidos.includes(event.key)){
+        event.preventDefault();
+        alert('❌ Este campo só aceita números');
+    }
+})
+
+document.getElementById('gasolina').addEventListener('keypress', function (event) {
+    const permitidos = "0123456789.,";
+
+    if(!permitidos.includes(event.key)){
+        event.preventDefault();
+        alert('❌ Este campo só aceita números');
+    }
+})
